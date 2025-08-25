@@ -23,11 +23,11 @@ export default function Footer() {
             <div className="mt-6 space-y-3 text-sm md:text-base">
               <div>
                 <p className="font-semibold text-white/90">Discuss Your Ideas</p>
-                <p className="text-white/80">contact@yourcompany.com</p>
+                <p className="text-white/80">maazshujaat123@gmail.com</p>
               </div>
               <div>
                 <p className="font-semibold text-white/90">Call us</p>
-                <p className="text-white/80">(213) 465-1333</p>
+                <a className="text-white/80" href="tel:+1 208 291 4545">208 291 4545</a>
               </div>
             </div>
           </div>
@@ -43,7 +43,10 @@ export default function Footer() {
               <form className="mt-4 space-y-3">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <input type="text" placeholder="Full Name" className="h-10 w-full rounded-md border border-white/20 bg-white text-gray-900 px-3 text-sm outline-none focus:ring-2 focus:ring-[#ffd139]" />
-                  <textarea placeholder="Write a Message" className="sm:row-span-2 h-10 sm:h-full min-h-[40px] w-full rounded-md border border-white/20 bg-white text-gray-900 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-[#ffd139]" />
+                  <textarea
+                    placeholder="Write a Message"
+                    className="sm:row-span-2 h-10 sm:h-full min-h-[40px] w-full rounded-md border border-white/20 bg-white text-gray-900 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-[#ffd139]"
+                  ></textarea>
                   <input type="email" placeholder="Email Address" className="h-10 w-full rounded-md border border-white/20 bg-white text-gray-900 px-3 text-sm outline-none focus:ring-2 focus:ring-[#ffd139]" />
                   <input type="tel" placeholder="Phone Number" className="h-10 w-full rounded-md border border-white/20 bg-white text-gray-900 px-3 text-sm outline-none focus:ring-2 focus:ring-[#ffd139]" />
                 </div>
@@ -56,7 +59,7 @@ export default function Footer() {
           </div>
 
           {/* RIGHT: Floating Image */}
-          <div className="lg:col-span-2 absolute hidden sm:hidden md:hidden lg:flex justify-center lg:justify-end items-center w-[450px] h-[450px] top-4 right-0">
+          <div className="lg:col-span-2 absolute hidden sm:hidden md:hidden lg:inline justify-center lg:justify-end items-center w-[350px] h-[450px] top-4 -right-4">
             <img
               src="/assets/women-pic.png"
               alt="Consultant"

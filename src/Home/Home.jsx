@@ -1,4 +1,5 @@
 import BookPublishingSection from "../components/BookPublishingSection"
+import BottomBar from "../components/BottomBar"
 import Hero from "../components/Hero"
 import PublishingHeroBanner from "../components/PublishingHeroBanner"
 import PublishingPlatforms from "../components/PublishingPlatforms"
@@ -16,9 +17,10 @@ const Home = () => {
         <BookPublishingSection/>
         <PublishingHeroBanner/>
         <PublishedWorksSection/>
-        <PublishingProcessSection/>
+        <PublishingProcessSection client:load/>
         <StoryCTABanner/>
         <TestimonialsSection/>
+        <BottomBar/>
     </div>
   )
 }

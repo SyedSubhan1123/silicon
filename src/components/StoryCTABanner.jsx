@@ -9,15 +9,17 @@ export default function StoryCTABanner({
   return (
     <section
       className="relative w-full bg-[#2a2623] overflow-hidden"
-      style={{ backgroundImage: `url('/assets/cta3.jpg')` }}
+      style={{ backgroundImage: `url('/assets/cta3.jpg')`, backgroundSize: "cover", backgroundPosition: "center" }}
     >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/50"></div>
       {/* container */}
       <div className="relative mx-auto max-w-[1280px] px-4 md:px-8 py-10">
         <div className="grid grid-cols-12 items-center gap-6">
 
           {/* LEFT - books/devices */}
           <div className="col-span-12 md:col-span-6 flex justify-center md:justify-start relative">
-            
+
             {/* Mobile layout (stacked & centered) */}
             <div className="flex md:hidden flex-wrap justify-center gap-3">
               <img src={art.book1} alt="Book 1" className="w-24 h-36 object-contain" />
@@ -59,16 +61,16 @@ export default function StoryCTABanner({
             <h2 className="mt-2 text-[42px] md:text-[48px] font-extrabold leading-tight text-yellow-400">
               LET US HELP
             </h2>
-            <p className="mt-3 text-white/80 text-[14px] md:text-[15px] max-w-[520px] mx-auto md:mx-0">
+            <p className="mt-3 text-white text-[14px] md:text-[18px] max-w-[520px] font-semibold mx-auto md:mx-0">
               Consult our experts, and we’ll transform your thoughts into words.
             </p>
 
             <div className="mt-6 flex flex-wrap items-center justify-center md:justify-start gap-4">
               <a
-                href="#"
+                href="tel:+1 208 291 4545"
                 className="inline-flex items-center justify-center rounded-full px-6 py-3 text-[14px] font-semibold bg-yellow-400 text-gray-900 shadow-lg hover:bg-yellow-300 active:translate-y-[1px]"
               >
-                Consult Our Experts
+                📞 208 291 4545
               </a>
               <a
                 href="#"

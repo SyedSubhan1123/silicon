@@ -1,19 +1,7 @@
 export default function TestimonialsSection() {
   return (
     <section className="relative isolate w-full bg-gray-50 text-gray-900">
-      {/* Subtle grayscale faces at the far left/right (replace URLs) */}
-      <div className="pointer-events-none absolute inset-0 flex justify-between opacity-20">
-        <div
-          className="hidden md:block h-full w-40 bg-center bg-cover grayscale"
-          style={{ backgroundImage: "url('/images/testimonials/bg-left.jpg')" }}
-          aria-hidden="true"
-        />
-        <div
-          className="hidden md:block h-full w-40 bg-center bg-cover grayscale"
-          style={{ backgroundImage: "url('/images/testimonials/bg-right.jpg')" }}
-          aria-hidden="true"
-        />
-      </div>
+
 
       {/* Content */}
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6 py-12 md:py-16">
@@ -28,60 +16,51 @@ export default function TestimonialsSection() {
         </p>
 
         {/* Cards */}
-        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3 items-stretch">
+        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3 items-stretch group">
           {/* Primary (green) card */}
-          <article className="relative rounded-xl bg-[#44C08D] text-white p-6 shadow-lg min-h-[180px]">
-            <h3 className="text-lg font-semibold">Jonah Hunt</h3>
-            <p className="mt-2 text-sm leading-relaxed">
-              My experience with our team has been superb — from developmental editing to publication
-              and book marketing. It’s the best in the ghostwriting industry.
-            </p>
-            {/* bottom notch for avatar */}
-            <div className="absolute left-1/2 -bottom-6 h-12 w-12 -translate-x-1/2 rounded-full bg-white shadow" />
-          </article>
-
-          {/* Secondary cards */}
-          <article className="relative rounded-xl bg-white p-6 shadow min-h-[180px]">
+        <article className="relative cursor-pointer rounded-xl bg-white text-black hover:scale-110 hover:bg-[#44C08D] transition-all duration-300 group-hover:text-white p-6 shadow min-h-[180px]">
             <h3 className="text-lg font-semibold text-gray-900">Neil Anderson, Sr</h3>
             <p className="mt-2 text-sm leading-relaxed text-gray-600">
               They delivered my book in just two months, more than I ever expected with such finesse.
             </p>
-            <div className="absolute left-1/2 -bottom-6 h-12 w-12 -translate-x-1/2 rounded-full bg-white shadow" />
+            <div className="absolute left-1/2 -bottom-6 h-12 w-12 -translate-x-1/2 rounded-full bg-white shadow">
+              <img
+                src="/assets/testimonials1 (1).jpg"
+                alt="Avatar — replace with Neil Anderson image"
+                className="h-12 w-12 rounded-full object-cover"
+              />
+            </div>
           </article>
 
-          <article className="relative rounded-xl bg-white p-6 shadow min-h-[180px]">
+          {/* Secondary cards */}
+          <article className="relative  cursor-pointer rounded-xl bg-white text-black hover:scale-110 hover:bg-[#44C08D] transition-all duration-300 group-hover:text-white p-6 shadow min-h-[180px]">
+            <h3 className="text-lg font-semibold text-gray-900">Neil Anderson, Sr</h3>
+            <p className="mt-2 text-sm leading-relaxed text-gray-600">
+              They delivered my book in just two months, more than I ever expected with such finesse.
+            </p>
+            <div className="absolute left-1/2 -bottom-6 h-12 w-12 -translate-x-1/2 rounded-full bg-white shadow">
+              <img
+                src="/assets/testimonials1 (2).jpg"
+                alt="Avatar — replace with Neil Anderson image"
+                className="h-12 w-12 rounded-full object-cover"
+              />
+            </div>
+          </article>
+
+          <article className="relative  cursor-pointer rounded-xl bg-white text-black hover:scale-110 hover:bg-[#44C08D] transition-all duration-300 group-hover:text-white p-6 shadow min-h-[180px]">
             <h3 className="text-lg font-semibold text-gray-900">Kouri James</h3>
             <p className="mt-2 text-sm leading-relaxed text-gray-600">
               A smooth experience, from shaping my ideas into clear, concise milestones. Couldn’t be any
               happier with the end‑to‑end results.
             </p>
-            <div className="absolute left-1/2 -bottom-6 h-12 w-12 -translate-x-1/2 rounded-full bg-white shadow" />
+            <div className="absolute left-1/2 -bottom-6 h-12 w-12 -translate-x-1/2 rounded-full bg-white shadow">
+              <img
+                src="/assets/testimonials1 (3).jpg"
+                alt="Avatar — replace with Kouri James image"
+                className="h-12 w-12 rounded-full object-cover"
+              />
+            </div>
           </article>
-        </div>
-
-        {/* Avatars row (replace src with real images) */}
-        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
-          <div className="flex items-center justify-center">
-            <img
-              src="/assets/testimonials1 (1).jpg"
-              alt="Avatar — replace with Jonah Hunt image"
-              className="h-12 w-12 rounded-full object-cover"
-            />
-          </div>
-          <div className="flex items-center justify-center">
-            <img
-              src="/assets/testimonials1 (2).jpg"
-              alt="Avatar — replace with Neil Anderson image"
-              className="h-12 w-12 rounded-full object-cover"
-            />
-          </div>
-          <div className="flex items-center justify-center">
-            <img
-              src="/assets/testimonials1 (3).jpg"
-              alt="Avatar — replace with Kouri James image"
-              className="h-12 w-12 rounded-full object-cover"
-            />
-          </div>
         </div>
       </div>
 

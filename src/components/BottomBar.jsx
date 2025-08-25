@@ -1,0 +1,30 @@
+const BottomBar = () => {
+    return (
+        <div className="fixed bottom-0 left-0 z-50 w-full inline sm:inline md:inline lg:hidden ">
+            <div className="flex flex-row w-full h-12 relative">
+                <div className="!bg-emerald-800 w-[100%] text-white font-bold h-full">
+                    <a className="flex justify-center items-center gap-2 h-full" href="tel:+1 208 291 4545">
+                        <svg
+                            stroke="currentColor"
+                            fill="currentColor"
+                            strokeWidth="0"
+                            viewBox="0 0 24 24"
+                            className="text-xl"
+                            height="1em"
+                            width="1em"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path fill="none" d="M0 0h24v24H0z" />
+                            <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 0 0-1.02.24l-2.2 2.2a15.045 15.045 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z" />
+                        </svg>
+                        <span>Call Now</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    )
+}
+
+export default BottomBar

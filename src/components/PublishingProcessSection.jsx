@@ -1,4 +1,4 @@
-export default function   PublishingProcessSection({
+export default function PublishingProcessSection({
   steps = [
     {
       k: 1,
@@ -67,33 +67,21 @@ export default function   PublishingProcessSection({
           {steps.map((s) => (
             <article
               key={s.k}
-              className="rounded-2xl bg-white px-5 py-6 md:px-7 md:py-8 shadow-[0_10px_30px_rgba(0,0,0,0.05)] ring-1 ring-black/5"
+              className="rounded-2xl  cursor-pointer hover:scale-110 transition-all duration-300 bg-white hover:bg-emerald-500 hover:text-white px-5 py-6 md:px-7 md:py-8 ring-1 ring-black/5 group shadow-2xl"
             >
-              <span className="inline-flex items-center rounded-full bg-gradient-to-b from-emerald-400 to-emerald-500 text-white text-[11px] md:text-[12px] font-semibold px-3 py-1 shadow-sm">
+              <span className="inline-flex items-center rounded-full bg-gradient-to-b from-emerald-400 to-emerald-500 text-white text-[11px] md:text-[12px] font-semibold px-3 py-1 shadow-xl">
                 {s.label}
               </span>
-              <h3 className="mt-3 text-[17px] md:text-[20px] font-semibold text-gray-900 tracking-tight">
+              <h3 className="mt-3 text-[17px] md:text-[20px] font-semibold text-gray-900 group-hover:text-white tracking-tight">
                 {s.title}
               </h3>
-              <p className="mt-2 text-[12.5px] md:text-[14px] leading-relaxed text-gray-600">
+              <p className="mt-2 text-[12.5px] md:text-[14px] leading-relaxed group-hover:text-white text-gray-600">
                 {s.text}
               </p>
             </article>
           ))}
         </div>
 
-        {/* Pagination dots */}
-        <div className="mt-8 flex items-center justify-center gap-2">
-          {Array.from({ length: 5 }).map((_, i) => (
-            <span
-              key={i}
-              className={
-                "h-2 w-2 rounded-full border border-black/10 " +
-                (i === 2 ? "bg-amber-400" : "bg-gray-300")
-              }
-            />
-          ))}
-        </div>
       </div>
     </section>
   );

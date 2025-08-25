@@ -8,7 +8,7 @@ export default function BookPublishingHeroExact({
   };
 
   return (
-    <section className="relative isolate min-h-screen bg-white overflow-hidden">
+    <section className="relative isolate min-h-full bg-white overflow-hidden">
       {/* RIGHT: Background collage with curved left edge */}
       <div
         aria-hidden
@@ -74,10 +74,10 @@ export default function BookPublishingHeroExact({
               </ul>
 
               <div className="mt-6 flex flex-wrap gap-3">
-                <button className="inline-flex items-center justify-center rounded-full bg-emerald-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-500/20 transition hover:-translate-y-0.5 hover:bg-emerald-600">
+                <button className="inline-flex items-center justify-center rounded-full bg-emerald-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-500/20 transition hover:-translate-y-0.5 hover:bg-emerald-600m cursor-pointer">
                   Get Started
                 </button>
-                <button className="inline-flex items-center justify-center rounded-full bg-amber-400 px-6 py-3 text-sm font-semibold text-gray-900 shadow-sm transition hover:-translate-y-0.5 hover:bg-amber-300">
+                <button className="inline-flex items-center justify-center rounded-full bg-amber-400 px-6 py-3 text-sm font-semibold text-gray-900 shadow-sm transition hover:-translate-y-0.5 hover:bg-amber-300m cursor-pointer">
                   Live Chat
                 </button>
               </div>
@@ -85,9 +85,9 @@ export default function BookPublishingHeroExact({
           </div>
 
           {/* RIGHT: Form card + badge + model image */}
-          <div className="relative flex flex-col items-center lg:items-end">
+          <div className="relative flex flex-col items-center lg:items-strart">
             {/* 50% OFF badge */}
-            <div className="absolute -top-3 right-6 z-20 hidden sm:flex">
+            <div className="absolute -top-3 right-16 z-20 hidden sm:flex">
               <div className="flex h-14 w-14 items-center justify-center rounded-full bg-black text-[10px] font-extrabold uppercase tracking-wider text-white shadow">
                 50% OFF
               </div>
@@ -134,7 +134,7 @@ export default function BookPublishingHeroExact({
 
                   <button
                     type="submit"
-                    className="mt-2 w-full rounded-full bg-black px-5 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-gray-900"
+                    className="mt-2 w-full rounded-full bg-black px-5 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-gray-900 cursor-pointer"
                   >
                     Connect With Our Expert
                   </button>
@@ -143,7 +143,7 @@ export default function BookPublishingHeroExact({
             </div>
 
             {/* MODEL IMAGE */}
-            <div className="mt-8 lg:mt-10 lg:absolute lg:-right-12 lg:top-12 hidden lg:block">
+            <div className="mt-8 lg:mt-10 lg:absolute lg:-right-12 lg:top-[12%] hidden lg:block">
               <img
                 src="/assets/hero-img.png"
                 alt="Model holding a notebook"
@@ -156,8 +156,8 @@ export default function BookPublishingHeroExact({
 
       {/* Bottom ribbon */}
       <div className="mt-10 lg:mt-16">
-        <div className="mx-auto w-full px-6 lg:px-0">
-          <div className="grid grid-cols-1 overflow-hidden rounded-md shadow ring-1 ring-black/5 sm:grid-cols-3">
+        <div className="mx-auto w-full px-6 lg:px-0 shadow-2xl">
+          <div className="grid grid-cols-1 overflow-hidden shadow-2xl ring-1 ring-black/5 sm:grid-cols-3">
             <div className="col-span-2 bg-white px-6 py-3 text-center text-[13px] font-semibold tracking-wide text-gray-900 sm:text-sm">
               KEEP ALL THE RIGHTS & REVENUES OF YOUR BOOK.
             </div>
