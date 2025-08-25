@@ -71,16 +71,16 @@ export default function BookPublishingSection() {
               <div className="mt-6 flex flex-col sm:flex-row justify-center md:justify-start gap-3">
                 <a
                   href="tel:+1 208 291 4545"
-                  className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm sm:text-base font-semibold text-gray-900 shadow hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white/60"
+                  className="inline-flex items-center justify-center rounded-full bg-yellow-400 px-6 py-3 text-sm sm:text-base font-semibold text-gray-900 shadow hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white/60"
                 >
                  📞 208 291 4545
                 </a>
-                <a
+                {/* <a
                   href="#"
                   className="inline-flex items-center justify-center rounded-full bg-yellow-400 px-6 py-3 text-sm sm:text-base font-semibold text-gray-900 shadow hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-yellow-200"
                 >
                   Live Chat
-                </a>
+                </a> */}
               </div>
             </ul>
             

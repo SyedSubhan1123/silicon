@@ -3,7 +3,7 @@ export default function PublishingHeroBanner() {
     <section className="relative w-full">
       {/* Background image */}
       <div
-        className="relative min-h-[480px] md:h-[480px] lg:h-[400px] w-full overflow-hidden"
+        className="relative max-h-[480px] md:h-[480px] lg:h-[400px] w-full overflow-hidden"
         style={{
           backgroundImage: `url('/assets/cta2.jpg')`,
           backgroundSize: "cover",
@@ -18,7 +18,7 @@ export default function PublishingHeroBanner() {
           <div className="grid w-full grid-cols-1 gap-10 md:grid-cols-2 items-center">
 
             {/* LEFT: IMAGE */}
-            <div className="flex items-center justify-center">
+            <div className="hidden sm:hidden md:flex lg:flex items-center justify-center">
               <div className="relative w-32 sm:w-40 md:w-52 lg:w-78 xl:w-72 aspect-[3/4] rounded-md overflow-hidden">
                 <img
                   src="/assets/book1.png"
@@ -46,16 +46,16 @@ export default function PublishingHeroBanner() {
               <div className="mt-6 flex flex-col sm:flex-row justify-center md:justify-start gap-3">
                 <a
                   href="tel:+1 208 291 4545"
-                  className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm sm:text-base font-semibold text-gray-900 shadow hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white/60"
+                  className="inline-flex items-center justify-center rounded-full bg-yellow-400 px-6 py-3 text-sm sm:text-base font-semibold text-gray-900 shadow hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white/60"
                 >
                   📞 208 291 4545
                 </a>
-                <a
+                {/* <a
                   href="#"
                   className="inline-flex items-center justify-center rounded-full bg-yellow-400 px-6 py-3 text-sm sm:text-base font-semibold text-gray-900 shadow hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-yellow-200"
                 >
                   Live Chat
-                </a>
+                </a> */}
               </div>
             </div>
 

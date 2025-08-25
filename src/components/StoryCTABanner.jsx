@@ -21,12 +21,12 @@ export default function StoryCTABanner({
           <div className="col-span-12 md:col-span-6 flex justify-center md:justify-start relative">
 
             {/* Mobile layout (stacked & centered) */}
-            <div className="flex md:hidden flex-wrap justify-center gap-3">
+            {/* <div className="flex md:hidden flex-wrap justify-center gap-3">
               <img src={art.book1} alt="Book 1" className="w-24 h-36 object-contain" />
               <img src={art.book2} alt="Book 2" className="w-24 h-36 object-contain" />
               <img src={art.tablet} alt="Tablet" className="w-28 h-40 object-contain" />
               <img src={art.phone} alt="Phone" className="w-16 h-32 object-contain" />
-            </div>
+            </div> */}
 
             {/* Desktop layout (absolute overlap) */}
             <div className="hidden md:block relative h-[260px] w-full">
@@ -72,12 +72,12 @@ export default function StoryCTABanner({
               >
                 📞 208 291 4545
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="inline-flex items-center justify-center rounded-full px-6 py-3 text-[14px] font-semibold bg-white text-gray-900 border border-gray-200 shadow-md hover:bg-gray-100 active:translate-y-[1px]"
               >
                 Live Chat
-              </a>
+              </a> */}
             </div>
           </div>
 
