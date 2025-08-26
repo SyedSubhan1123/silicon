@@ -18,7 +18,11 @@ export default function PublishingHeroBanner() {
           <div className="grid w-full grid-cols-1 gap-10 md:grid-cols-2 items-center">
 
             {/* LEFT: IMAGE */}
+<<<<<<< HEAD
             <div className="hidden sm:flex items-center justify-center">
+=======
+            <div className="hidden sm:hidden md:flex lg:flex items-center justify-center">
+>>>>>>> ab7da37bbc40f739ed0a2d238b365bbe2a22cfa6
               <div className="relative w-32 sm:w-40 md:w-52 lg:w-78 xl:w-72 aspect-[3/4] rounded-md overflow-hidden">
                 <img
                   src="/assets/book1.png"
@@ -63,12 +67,12 @@ export default function PublishingHeroBanner() {
                   </svg>
                   <span>(208) 291 4545</span>
                 </a>
-                <a
+                {/* <a
                   href="#"
                   className="hidden sm:inline-flex items-center justify-center rounded-full bg-yellow-400 px-6 py-3 text-sm sm:text-base font-semibold text-gray-900 shadow hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-yellow-200"
                 >
                   Live Chat
-                </a>
+                </a> */}
               </div>
             </div>
 

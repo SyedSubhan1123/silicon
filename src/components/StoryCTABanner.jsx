@@ -22,7 +22,6 @@ export default function StoryCTABanner({
 
             {/* Mobile layout (stacked & centered) */}
 
-
             {/* Desktop layout (absolute overlap) */}
             <div className="hidden md:block relative h-[260px] w-full">
               <img
@@ -80,12 +79,12 @@ export default function StoryCTABanner({
                 </svg>
                 <span>(208) 291 4545</span>
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="hidden sm:inline-flex items-center justify-center rounded-full px-6 py-3 text-[14px] font-semibold bg-white text-gray-900 border border-gray-200 shadow-md hover:bg-gray-100 active:translate-y-[1px]"
               >
                 Live Chat
-              </a>
+              </a> */}
             </div>
           </div>
 
