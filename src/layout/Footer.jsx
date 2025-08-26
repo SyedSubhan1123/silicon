@@ -23,11 +23,11 @@ export default function Footer() {
             <div className="mt-6 space-y-3 text-sm md:text-base">
               <div>
                 <p className="font-semibold text-white/90">Discuss Your Ideas</p>
-                <a href="mailto:info@b4blurb.com" className="text-white/80">info@b4blurb.com</a>
+                <p className="text-white/80">info@b4blurb.com</p>
               </div>
               <div>
                 <p className="font-semibold text-white/90">Call us</p>
-                <a className="text-white/80" href="tel:+1 208 291 4545">208 291 4545</a>
+                <a className="text-white/80" href="tel:+1 208 291 4545">(208) 291 4545</a>
               </div>
             </div>
           </div>

@@ -10,7 +10,7 @@ export default function PublishingProcessSection({
     {
       k: 2,
       label: "Step 2",
-      title: "How we Communicate",
+      title: "How we communicate",
       text:
         "We brief you on the process in clear, simple terms so we can align with your schedule and project scope. You'll get practical tips and a realistic preview of what's next.",
     },
