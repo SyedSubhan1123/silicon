@@ -1,10 +1,13 @@
-export default function BookPublishingHeroExact({
-  onSubmit = (payload) => console.log("Form submitted", payload),
-}) {
+import axios from "axios";
+import { useState } from "react";
+
+export default function Hero() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    const form = new FormData(e.currentTarget);
-    onSubmit(Object.fromEntries(form.entries()));
+    console.log(e, "called");
   };
 
   return (
@@ -105,7 +108,7 @@ export default function BookPublishingHeroExact({
                   </h2>
                 </div>
 
-                <form onSubmit={handleSubmit} className="space-y-3">
+                <form className="space-y-3">
                   <input
                     name="name"
                     required
@@ -131,13 +134,28 @@ export default function BookPublishingHeroExact({
                     placeholder="Your Message"
                     className="w-full resize-none rounded-md border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200"
                   />
-
                   <button
-                    type="submit"
-                    className="mt-2 w-full rounded-full bg-black px-5 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-gray-900 cursor-pointer"
+                    type="button"
+                    // disabled={isSubmitting}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      console.log(e, "called");
+                    }}
+                    className="mt-2 w-full rounded-full bg-black px-5 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-gray-900 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
                   >
-                    Connect With Our Expert
+                    {isSubmitting ? "Sending..." : "Connect With Our Expert"}
                   </button>
+
+                  {submitStatus === "success" && (
+                    <div className="mt-2 text-sm text-white bg-green-500 p-2 rounded-md">
+                      Message sent successfully!
+                    </div>
+                  )}
+                  {submitStatus === "error" && (
+                    <div className="mt-2 text-sm text-white bg-red-500 p-2 rounded-md">
+                      Failed to send message. Please try again.
+                    </div>
+                  )}
                 </form>
               </div>
             </div>
