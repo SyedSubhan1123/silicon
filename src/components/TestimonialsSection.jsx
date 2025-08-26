@@ -34,7 +34,7 @@ export default function TestimonialsSection() {
 
           {/* Secondary cards */}
           <article className="relative  cursor-pointer rounded-xl bg-white text-black hover:scale-110 hover:bg-[#44C08D] transition-all duration-300 group-hover:text-white p-6 shadow min-h-[180px]">
-            <h3 className="text-lg font-semibold text-gray-900">Neil Anderson, Sr</h3>
+            <h3 className="text-lg font-semibold text-gray-900">Jhone Brave, Sr</h3>
             <p className="mt-2 text-sm leading-relaxed text-gray-600">
               They delivered my book in just two months, more than I ever expected with such finesse.
             </p>

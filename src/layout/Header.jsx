@@ -1,78 +1,74 @@
 const Header = () => {
   return (
-    <header className="w-full bg-white shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-between items-center py-4 gap-4">
+    <header className="bg-[#E9F4EE] text-black h-[104px] md:h-[120px] sm:h-[120px] lg:h-[104px] px-6 sm:px-6 lg:px-6">
+      <div className="silicon-container">
+        <div className="py-3 flex justify-between items-center">
 
-        {/* Logo */}
-        <div className="flex-shrink-0">
-          <img
-            src="/assets/logo.png"
-            alt="Logo"
-            className="h-12 sm:h-14 md:h-16 w-auto object-contain"
-          />
-        </div>
+          <div className="flex-1 flex justify-center items-start sm:justify-start md:justify-center lg:items-start lg:justify-start">
+            <img
+              src="/assets/logo.png"
+              alt="B4Blurb Publishers Logo"
+              className="object-cover h-20 w-auto sm:w-auto sm:h-20  md:w-auto md:h-24 lg:h-20 lg:w-auto"
+            />
+          </div>
 
-        {/* Contact + CTA */}
-        <div className="flex flex-col sm:flex-row items-center sm:gap-6 gap-3 w-full sm:w-auto text-center sm:text-left">
 
-          {/* Email */}
-          <div>
-            <a href="mailto:maazshujaat123@gmail.com" className="flex justify-center sm:justify-start items-center gap-2 text-base sm:text-lg">
+          <div className="hidden sm:flex md:hidden lg:flex flex-row justify-center items-center gap-8">
+
+            <div className="flex items-center justify-center gap-2 mt-1 ml-4">
+              <a
+                href="mailto:info@bookcraftpublishers.com"
+                className="flex items-center text-gray-800 transition no-underline font-bold"
+              >
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  strokeWidth="0"
+                  viewBox="0 0 24 24"
+                  className="text-2xl mr-2 text-emerald-500"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path fill="none" d="M0 0h24v24H0z"></path>
+                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"></path>
+                </svg>
+                <span className="montserrat">info@b4blurb.com</span>
+              </a>
+            </div>
+            <a
+              href="tel:8884305848"
+              className="flex items-center mt-1 no-underline bg-emerald-500 text-white px-4 py-2 rounded-xl text-base cursor-pointer hover:bg-[#a81b2f] transition font-bold"
+            >
               <svg
                 stroke="currentColor"
                 fill="currentColor"
                 strokeWidth="0"
                 viewBox="0 0 24 24"
-                className="text-xl mt-0.5"
+                className="text-2xl mr-2"
                 height="1em"
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path fill="none" d="M0 0h24v24H0z" />
-                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 
-                2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 
-                4l-8 5-8-5V6l8 5 8-5v2z" />
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path>
               </svg>
-              maazshujaat123@gmail.com
+              <span className="montserrat">(208) 291 4545</span>
             </a>
           </div>
-
-          {/* Phone */}
-          <div>
-            <a href="tel:+1 208 291 4545" className="flex justify-center sm:justify-start items-center gap-2 text-base sm:text-lg">
-              <svg
-                stroke="currentColor"
-                fill="currentColor"
-                strokeWidth="0"
-                viewBox="0 0 24 24"
-                className="text-xl"
-                height="1em"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path fill="none" d="M0 0h24v24H0z" />
-                <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 
-                1.02 0 0 0-1.02.24l-2.2 2.2a15.045 15.045 
-                0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 
-                .25-1A11.36 11.36 0 0 1 8.5 4c0-.55-.45-1-1-1H4c-.55 
-                0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 
-                1-.45 1-1v-3.5c0-.55-.45-1-1-1z" />
-              </svg>
-              208 291 4545
-            </a>
-          </div>
-
-          {/* CTA Button */}
-          <div>
-            <button className="bg-emerald-500 cursor-pointer rounded-2xl py-2 px-5 sm:py-2.5 sm:px-6 font-bold text-white text-sm sm:text-base lg:text-lg hover:bg-emerald-600 transition">
-              Live Chat
-            </button>
-          </div>
-
         </div>
       </div>
+     
     </header>
   );
 };
 
 export default Header;
+
+
+
+
+
+
+
+

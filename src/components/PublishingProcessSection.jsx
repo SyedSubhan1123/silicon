@@ -10,7 +10,7 @@ export default function PublishingProcessSection({
     {
       k: 2,
       label: "Step 2",
-      title: "Connect With Us",
+      title: "How we communicate",
       text:
         "We brief you on the process in clear, simple terms so we can align with your schedule and project scope. You'll get practical tips and a realistic preview of what's next.",
     },
@@ -56,7 +56,7 @@ export default function PublishingProcessSection({
             Our Streamlined Book Publishing Process
           </h2>
           <p className="mx-auto mt-2 md:mt-3 max-w-[860px] text-[12px] md:text-[14.5px] leading-relaxed text-gray-500">
-            Meet the team behind Falcon Book Publishers. With years of experience in the design industry, we prepare
+            Meet the team behind B4 Blurb. With years of experience in the design industry, we prepare
             manuscripts for a smooth ride from brief to book-on-your-shelf. Below is how we keep things simple and
             predictable.
           </p>
