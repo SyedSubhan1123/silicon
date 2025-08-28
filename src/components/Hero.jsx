@@ -9,10 +9,10 @@ export default function Hero() {
     setIsSubmitting(true);
 
     // Simulate async submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitStatus("success");
-    }, 1200);
+    // setTimeout(() => {
+    //   setIsSubmitting(false);
+    //   setSubmitStatus("success");
+    // }, 1200);
   };
 
   return (
@@ -57,7 +57,7 @@ export default function Hero() {
           <div className="relative">
             <div className="bg-white p-6 sm:p-8 shadow-2xl border-4 border-t-amber-300 border-b-amber-300 border-l-amber-300 border-r-white rounded-md">
               <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-3 py-1 text-[11px] font-semibold tracking-wide text-gray-800 shadow-sm">
-                <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-700" />
                 TOP-TIER BOOK PUBLISHING
               </div>
 
@@ -65,7 +65,7 @@ export default function Hero() {
                 Book Publishing Company
               </h1>
 
-              <ul className="mt-5 space-y-3 text-[14px] sm:text-base text-gray-800">
+              <div className="mt-5 space-y-3 text-[14px] sm:text-base text-gray-800">
                 {[
                   "Custom book publishing: eBooks, paperbacks & distribution.",
                   "Premium book cover design.",
@@ -74,7 +74,7 @@ export default function Hero() {
                   "Distribution to major platforms including Amazon & Kindle.",
                   "End-to-end service: design, launch & scale.",
                 ].map((t, i) => (
-                  <li key={i} className="flex items-start gap-3">
+                  <span key={i} className="flex items-start gap-3">
                     <svg
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
@@ -87,9 +87,9 @@ export default function Hero() {
                       <path d="M20 6L9 17l-5-5" />
                     </svg>
                     <span>{t}</span>
-                  </li>
+                  </span>
                 ))}
-              </ul>
+              </div>
 
               <div className="mt-6 flex flex-wrap gap-3">
                 <a
@@ -121,10 +121,10 @@ export default function Hero() {
             <div className="relative w-full max-w-md rounded-3xl bg-white p-2 shadow-2xl ring-1 ring-black/5">
               <div className="rounded-2xl bg-emerald-500 p-6 sm:p-7">
                 <div className="mb-4">
-                  <p className="text-[11px] font-semibold uppercase tracking-wider text-yellow-200">
+                  <p className="text-[14px] font-bold uppercase tracking-wider text-black">
                     Do You Have a Manuscript Ready?
                   </p>
-                  <h2 className="text-xl sm:text-2xl font-extrabold text-white">
+                  <h2 className="text-xl sm:text-2xl font-extrabold text-black">
                     PUBLISH YOUR BOOK NOW
                   </h2>
                 </div>

@@ -41,7 +41,9 @@ export default function BookPublishingSection() {
         <div className="relative px-6 py-10 md:px-12 md:py-12">
           {/* Heading */}
           <h2 className="text-[22px] leading-snug font-semibold text-gray-900 tracking-tight md:text-3xl">
-            <span className="block">BOOK PUBLISHING Hassle-Free & Affordable</span>
+            <span className="block">
+              BOOK PUBLISHING Hassle-Free & Affordable
+            </span>
             <span className="block">Get Published with Us Now</span>
           </h2>
 
@@ -51,16 +53,19 @@ export default function BookPublishingSection() {
             with digital disruption, piracy, changing reading habits, the rise
             of audiobooks, increased competition, production complexities, and
             newer platforms. A one-stop publishing solution can streamline your
-            path to a successful publication with services, clear revenue splits,
-            and wider distribution.
+            path to a successful publication with services, clear revenue
+            splits, and wider distribution.
           </p>
 
           {/* Image + bullet list side by side */}
           <div className="mt-8 grid grid-cols-1 gap-8 md:mt-10 md:grid-cols-2 md:items-center">
-            {/* IMAGE — now styled like header */}
+            {/* IMAGE */}
             <div className="w-full h-60 md:h-96 overflow-hidden rounded-md shadow-sm">
               <picture>
-                <source srcSet="https://res.cloudinary.com/dn3xpdakt/image/upload/v1756409656/women-image_swh1rr.webp" type="image/webp" />
+                <source
+                  srcSet="https://res.cloudinary.com/dn3xpdakt/image/upload/v1756409656/women-image_swh1rr.webp"
+                  type="image/webp"
+                />
                 <img
                   src="https://res.cloudinary.com/dn3xpdakt/image/upload/v1756409656/women-image_swh1rr.webp"
                   alt="Author sitting between bookshelves"
@@ -71,18 +76,20 @@ export default function BookPublishingSection() {
             </div>
 
             {/* Bulleted feature list */}
-            <ul className="list-disc pl-5 text-gray-700 text-[14px] leading-7 md:text-[15px] md:leading-8">
-              {bullets.map((item, idx) => (
-                <li key={idx} className="marker:text-gray-400">
-                  {item}
-                </li>
-              ))}
+            <div>
+              <ul className="list-disc pl-5 text-gray-700 text-[14px] leading-7 md:text-[15px] md:leading-8">
+                {bullets.map((item, idx) => (
+                  <li key={idx} className="marker:text-gray-400">
+                    {item}
+                  </li>
+                ))}
+              </ul>
 
               {/* CTA Buttons */}
               <div className="mt-6 flex flex-col sm:flex-row justify-center md:justify-start gap-3">
                 <a
-                  href="tel:+1 208 291 4545"
-                  className="flex items-center justify-center w-full sm:w-[50%] h-12 gap-2 no-underline bg-emerald-500 text-blacl px-4 py-2 rounded-full text-base cursor-pointer hover:bg-[#ffffff] hover:text-black transition font-bold animate-pulse"
+                  href="tel:+12082914545"
+                  className="flex items-center justify-center w-full sm:w-[50%] h-12 gap-2 no-underline bg-emerald-500 text-white px-4 py-2 rounded-full text-base cursor-pointer hover:bg-[#ffffff] hover:text-black transition font-bold animate-pulse"
                 >
                   <svg
                     stroke="currentColor"
@@ -107,7 +114,7 @@ export default function BookPublishingSection() {
                   Live Chat
                 </a>
               </div>
-            </ul>
+            </div>
           </div>
         </div>
       </div>

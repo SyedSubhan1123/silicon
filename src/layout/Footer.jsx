@@ -108,7 +108,7 @@ export default function Footer() {
           </div>
 
           {/* Social icons */}
-          <div className="flex items-center gap-3 ml-4">
+          {/* <div className="flex items-center gap-3 ml-4">
             <a href="#" className="hover:text-[#ffd139]">
               <FaFacebookF />
             </a>
@@ -118,7 +118,7 @@ export default function Footer() {
             <a href="#" className="hover:text-[#ffd139]">
               <FaLinkedinIn />
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

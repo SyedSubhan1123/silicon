@@ -9,7 +9,7 @@ const Header = () => {
             <picture>
               {/* Serve modern formats first */}
            
-              <source srcSet="/assets/logo.png" type="image/png" />
+              <source srcSet="https://res.cloudinary.com/dn3xpdakt/image/upload/v1756409115/logo_jcp3e7.webp" type="image/webp" />
               <img
                 src="https://res.cloudinary.com/dn3xpdakt/image/upload/v1756409115/logo_jcp3e7.webp"
                 alt="B4Blurb Publishers Logo"
