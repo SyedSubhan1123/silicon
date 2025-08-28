@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useState } from "react";
 
 export default function Hero() {
@@ -7,28 +6,43 @@ export default function Hero() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e, "called");
+    setIsSubmitting(true);
+
+    // Simulate async submission
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setSubmitStatus("success");
+    }, 1200);
   };
 
   return (
     <section className="relative isolate min-h-full bg-white overflow-hidden">
-      {/* RIGHT: Background collage with curved left edge */}
+      {/* RIGHT: Hero collage */}
       <div
-        aria-hidden
-        className="absolute inset-y-0 right-0 -z-10 hidden lg:block w-[60%]"
-        style={{
-          clipPath: "ellipse(85% 120% at 100% 50%)",
-          backgroundImage: `url('/assets/cta1.jpg')`,
-          backgroundSize: "contain",
-          backgroundPosition: "center",
-        }}
+        aria-hidden="true"
+        className="absolute inset-y-0 right-0 -z-10 hidden lg:flex w-[60%] items-center justify-center"
+        style={{ clipPath: "ellipse(85% 120% at 100% 50%)" }}
       >
-        <div className="absolute inset-0 bg-black/20" />
+        <picture>
+          <source
+            srcSet="https://res.cloudinary.com/dn3xpdakt/image/upload/v1756409314/cta1_ndstqx.webp"
+            type="image/jpg"
+          />
+          <img
+            src="https://res.cloudinary.com/dn3xpdakt/image/upload/v1756409314/cta1_ndstqx.webp"
+            alt="Hero background"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+            className="w-full h-[90vh] object-cover"
+          />
+        </picture>
+        <div className="absolute inset-0 bg-black/20" aria-hidden="true" />
       </div>
 
-      {/* Decorative soft rainbow sheen on the left */}
+      {/* Decorative gradient */}
       <div
-        aria-hidden
+        aria-hidden="true"
         className="pointer-events-none absolute -top-6 -left-10 -z-10 h-[460px] w-[720px] rotate-[4deg]"
         style={{
           background:
@@ -36,10 +50,10 @@ export default function Hero() {
         }}
       />
 
-      {/* Main two-column hero */}
+      {/* Main content */}
       <div className="mx-auto max-w-7xl px-6 lg:px-8 pt-16 lg:pt-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-          {/* LEFT: Content card */}
+          {/* LEFT: Hero text */}
           <div className="relative">
             <div className="bg-white p-6 sm:p-8 shadow-2xl border-4 border-t-amber-300 border-b-amber-300 border-l-amber-300 border-r-white rounded-md">
               <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-3 py-1 text-[11px] font-semibold tracking-wide text-gray-800 shadow-sm">
@@ -62,6 +76,7 @@ export default function Hero() {
                 ].map((t, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <svg
+                      aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                       className="mt-1 h-5 w-5 flex-none text-emerald-600"
@@ -77,30 +92,36 @@ export default function Hero() {
               </ul>
 
               <div className="mt-6 flex flex-wrap gap-3">
-                <button className="inline-flex items-center justify-center rounded-full bg-emerald-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-500/20 transition hover:-translate-y-0.5 hover:bg-emerald-600m cursor-pointer">
+                <a
+                  href="#get-started"
+                  className="inline-flex items-center justify-center rounded-full bg-emerald-500 px-6 py-3 text-sm font-semibold text-black shadow-lg shadow-emerald-500/20 transition hover:-translate-y-0.5 hover:bg-emerald-800"
+                >
                   Get Started
-                </button>
-                <button className="inline-flex items-center justify-center rounded-full bg-amber-400 px-6 py-3 text-sm font-semibold text-gray-900 shadow-sm transition hover:-translate-y-0.5 hover:bg-amber-300m cursor-pointer">
+                </a>
+                <a
+                  href="#live-chat"
+                  className="inline-flex items-center justify-center rounded-full bg-amber-400 px-6 py-3 text-sm font-semibold text-gray-900 shadow-sm transition hover:-translate-y-0.5 hover:bg-amber-300"
+                >
                   Live Chat
-                </button>
+                </a>
               </div>
             </div>
           </div>
 
-          {/* RIGHT: Form card + badge + model image */}
-          <div className="relative flex flex-col items-center lg:items-strart">
-            {/* 50% OFF badge */}
-            <div className="absolute -top-3 right-16 z-20 hidden sm:flex">
+          {/* RIGHT: Form */}
+          <div className="relative flex flex-col items-center lg:items-start">
+            {/* Badge */}
+            <div className="absolute -top-3 right-30 z-20 hidden sm:flex">
               <div className="flex h-14 w-14 items-center justify-center rounded-full bg-black text-[10px] font-extrabold uppercase tracking-wider text-white shadow">
                 50% OFF
               </div>
             </div>
 
-            {/* Form panel */}
+            {/* Form */}
             <div className="relative w-full max-w-md rounded-3xl bg-white p-2 shadow-2xl ring-1 ring-black/5">
-              <div className="rounded-2xl bg-emerald-600 p-6 sm:p-7">
+              <div className="rounded-2xl bg-emerald-500 p-6 sm:p-7">
                 <div className="mb-4">
-                  <p className="text-[11px] font-semibold uppercase tracking-wider text-white/90">
+                  <p className="text-[11px] font-semibold uppercase tracking-wider text-yellow-200">
                     Do You Have a Manuscript Ready?
                   </p>
                   <h2 className="text-xl sm:text-2xl font-extrabold text-white">
@@ -108,7 +129,7 @@ export default function Hero() {
                   </h2>
                 </div>
 
-                <form className="space-y-3">
+                <form onSubmit={handleSubmit} className="space-y-3">
                   <input
                     name="name"
                     required
@@ -135,19 +156,15 @@ export default function Hero() {
                     className="w-full resize-none rounded-md border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200"
                   />
                   <button
-                    type="button"
-                    // disabled={isSubmitting}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      console.log(e, "called");
-                    }}
-                    className="mt-2 w-full rounded-full bg-black px-5 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-gray-900 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="mt-2 w-full rounded-full bg-black px-5 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-gray-900 disabled:opacity-70 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? "Sending..." : "Connect With Our Expert"}
                   </button>
 
                   {submitStatus === "success" && (
-                    <div className="mt-2 text-sm text-white bg-green-500 p-2 rounded-md">
+                    <div className="mt-2 text-sm text-white bg-green-700 p-2 rounded-md">
                       Message sent successfully!
                     </div>
                   )}
@@ -160,13 +177,19 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* MODEL IMAGE */}
+            {/* Model image */}
             <div className="mt-8 lg:mt-10 lg:absolute lg:-right-12 lg:top-[12%] hidden lg:block">
-              <img
-                src="/assets/hero-img.png"
-                alt="Model holding a notebook"
-                className="h-[300px] w-auto lg:h-[420px] object-contain rounded-[28px]"
-              />
+              <picture>
+                <source
+                  srcSet="https://res.cloudinary.com/dn3xpdakt/image/upload/v1756409264/hero-img_fxgu2s.webp"
+                  type="image/png"
+                />
+                <img
+                  src="https://res.cloudinary.com/dn3xpdakt/image/upload/v1756409264/hero-img_fxgu2s.webp"
+                  alt="Smiling author holding a notebook"
+                  className="h-[300px] w-auto lg:h-[420px] object-contain rounded-[28px]"
+                />
+              </picture>
             </div>
           </div>
         </div>

@@ -4,17 +4,25 @@ const Header = () => {
       <div className="silicon-container">
         <div className="py-3 flex justify-between items-center">
 
+          {/* Logo optimized */}
           <div className="flex-1 flex justify-center items-start sm:justify-start md:justify-center lg:items-start lg:justify-start">
-            <img
-              src="/assets/logo.png"
-              alt="B4Blurb Publishers Logo"
-              className="object-cover h-20 w-auto sm:w-auto sm:h-20  md:w-auto md:h-24 lg:h-20 lg:w-auto"
-            />
+            <picture>
+              {/* Serve modern formats first */}
+           
+              <source srcSet="/assets/logo.png" type="image/png" />
+              <img
+                src="https://res.cloudinary.com/dn3xpdakt/image/upload/v1756409115/logo_jcp3e7.webp"
+                alt="B4Blurb Publishers Logo"
+                loading="eager" // logos should load immediately
+                width="189"
+                height="80"
+                className="h-20 md:h-24 lg:h-20 w-auto object-contain"
+              />
+            </picture>
           </div>
 
-
+          {/* Contact buttons */}
           <div className="hidden sm:flex md:hidden lg:flex flex-row justify-center items-center gap-8">
-
             <div className="flex items-center justify-center gap-2 mt-1 ml-4">
               <a
                 href="mailto:info@bookcraftpublishers.com"
@@ -38,7 +46,7 @@ const Header = () => {
             </div>
             <a
               href="tel:8884305848"
-              className="flex items-center mt-1 no-underline bg-emerald-500 text-white px-4 py-2 rounded-xl text-base cursor-pointer hover:bg-[#a81b2f] transition font-bold"
+              className="flex items-center mt-1 no-underline bg-emerald-400 text-black px-4 py-2 rounded-xl text-base cursor-pointer hover:bg-[#ffffff] transition font-bold"
             >
               <svg
                 stroke="currentColor"
@@ -58,17 +66,8 @@ const Header = () => {
           </div>
         </div>
       </div>
-     
     </header>
   );
 };
 
 export default Header;
-
-
-
-
-
-
-
-
