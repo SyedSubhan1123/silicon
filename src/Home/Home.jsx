@@ -11,7 +11,7 @@ import TestimonialsSection from "../components/TestimonialsSection";
 const Home = () => {
   return (
     <div>
-      <Hero client:load />
+      <Hero />
       <PublishingPlatforms />
       <BookPublishingSection />
       <PublishingHeroBanner />

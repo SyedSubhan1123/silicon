@@ -1,19 +1,40 @@
+import { actions, isInputError } from "astro:actions";
 import { useState } from "react";
 
 export default function Hero() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null);
+  const [status, setStatus] = useState("idle");
+  const [errorMsg, setErrorMsg] = useState("");
 
-  const handleSubmit = (e) => {
+  async function onSubmit(e) {
+    console.log("called");
+
     e.preventDefault();
-    setIsSubmitting(true);
+    setStatus("submitting");
+    setErrorMsg("");
 
-    // Simulate async submission
-    // setTimeout(() => {
-    //   setIsSubmitting(false);
-    //   setSubmitStatus("success");
-    // }, 1200);
-  };
+    const form = e.currentTarget;
+    const fd = new FormData(form);
+
+    // Call the server action from the client
+    const { data, error } = await actions.sendSignup(fd);
+
+    if (error) {
+      // Show Zod field errors nicely if you want:
+      if (isInputError(error)) {
+        const first = Object.values(error.fields)[0]?.[0] ?? "Invalid input.";
+        setErrorMsg(first);
+      } else {
+        setErrorMsg(error.message ?? "Something went wrong.");
+      }
+      setStatus("error");
+      return;
+    }
+
+    setStatus("success");
+    form.reset();
+  }
+
+  console.log(status, "status");
 
   return (
     <section className="relative isolate min-h-full bg-white overflow-hidden">
@@ -129,7 +150,7 @@ export default function Hero() {
                   </h2>
                 </div>
 
-                <form onSubmit={handleSubmit} className="space-y-3">
+                <div className="space-y-3">
                   <input
                     name="name"
                     required
@@ -156,24 +177,24 @@ export default function Hero() {
                     className="w-full resize-none rounded-md border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200"
                   />
                   <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="mt-2 w-full rounded-full bg-black px-5 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-gray-900 disabled:opacity-70 disabled:cursor-not-allowed"
+                    type="button"
+                    onClick={onSubmit}
+                    disabled={status === "submitting"}
+                    className="mt-2 w-full rounded-full bg-black px-5 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-gray-900 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
                   >
-                    {isSubmitting ? "Sending..." : "Connect With Our Expert"}
+                    {status === "submitting"
+                      ? "Sending..."
+                      : "Connect With Our Expert"}
                   </button>
-
-                  {submitStatus === "success" && (
-                    <div className="mt-2 text-sm text-white bg-green-700 p-2 rounded-md">
-                      Message sent successfully!
-                    </div>
+                  {status === "success" && (
+                    <p className="text-green-600 text-sm">
+                      Thanks! Your message was sent.
+                    </p>
                   )}
-                  {submitStatus === "error" && (
-                    <div className="mt-2 text-sm text-white bg-red-500 p-2 rounded-md">
-                      Failed to send message. Please try again.
-                    </div>
+                  {status === "error" && (
+                    <p className="text-red-600 text-sm">{errorMsg}</p>
                   )}
-                </form>
+                </div>
               </div>
             </div>
 
