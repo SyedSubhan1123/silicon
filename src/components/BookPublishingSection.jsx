@@ -108,6 +108,14 @@ export default function BookPublishingSection() {
                 </a>
 
                 <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (window.Tawk_API) {
+                      window.Tawk_API.toggle(); // opens/closes the widget
+                    } else {
+                      console.error("Tawk API not loaded yet!");
+                    }
+                  }}
                   href="#"
                   className="hidden sm:inline-flex items-center justify-center rounded-full bg-yellow-400 px-6 py-3 text-sm sm:text-base font-semibold text-gray-900 shadow hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-yellow-200 w-full sm:w-[50%]"
                 >

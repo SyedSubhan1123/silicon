@@ -1,0 +1,281 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <section class="relative isolate min-h-full bg-white overflow-hidden">
+    <!-- RIGHT: Hero collage -->
+    <div
+      aria-hidden="true"
+      class="absolute inset-y-0 right-0 -z-10 hidden lg:flex w-[60%] items-center justify-center"
+      style="clip-path: ellipse(85% 120% at 100% 50%);"
+    >
+      <picture>
+        <source
+          srcset="https://res.cloudinary.com/dn3xpdakt/image/upload/v1756409314/cta1_ndstqx.webp"
+          type="image/jpg"
+        />
+        <img
+          src="https://res.cloudinary.com/dn3xpdakt/image/upload/v1756409314/cta1_ndstqx.webp"
+          alt="Hero background"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+          class="w-full h-[90vh] object-cover"
+        />
+      </picture>
+      <div class="absolute inset-0 bg-black/20" aria-hidden="true"></div>
+    </div>
+
+    <!-- Decorative gradient -->
+    <div
+      aria-hidden="true"
+      class="pointer-events-none absolute -top-6 -left-10 -z-10 h-[460px] w-[720px] rotate-[4deg]"
+      style="background: radial-gradient(90% 90% at 10% 10%, rgba(12,212,215,.18) 0%, rgba(255,221,87,.18) 35%, rgba(199,210,254,.18) 60%, rgba(255,255,255,0) 80%);"
+    ></div>
+
+    <!-- Main content -->
+    <div class="mx-auto max-w-7xl px-6 lg:px-8 pt-16 lg:pt-24">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <!-- LEFT: Hero text -->
+        <div class="relative">
+          <div
+            class="bg-white p-6 sm:p-8 shadow-2xl border-4 border-t-amber-300 border-b-amber-300 border-l-amber-300 border-r-white rounded-md"
+          >
+            <div
+              class="mb-3 inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-3 py-1 text-[11px] font-semibold tracking-wide text-gray-800 shadow-sm"
+            >
+              <span class="inline-block h-1.5 w-1.5 rounded-full bg-emerald-700"></span>
+              TOP-TIER BOOK PUBLISHING
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight text-gray-900">
+              Book Publishing Company
+            </h1>
+
+            <div class="mt-5 space-y-3 text-[14px] sm:text-base text-gray-800">
+              <span class="flex items-start gap-3">
+                <svg
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="mt-1 h-5 w-5 flex-none text-emerald-600"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+                <span>Custom book publishing: eBooks, paperbacks & distribution.</span>
+              </span>
+              <span class="flex items-start gap-3">
+                <svg
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="mt-1 h-5 w-5 flex-none text-emerald-600"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+                <span>Premium book cover design.</span>
+              </span>
+              <span class="flex items-start gap-3">
+                <svg
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="mt-1 h-5 w-5 flex-none text-emerald-600"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+                <span>Strategic book marketing funnels.</span>
+              </span>
+              <span class="flex items-start gap-3">
+                <svg
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="mt-1 h-5 w-5 flex-none text-emerald-600"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+                <span>In-house team with publishing consultancy & support.</span>
+              </span>
+              <span class="flex items-start gap-3">
+                <svg
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="mt-1 h-5 w-5 flex-none text-emerald-600"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+                <span>Distribution to major platforms including Amazon & Kindle.</span>
+              </span>
+              <span class="flex items-start gap-3">
+                <svg
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="mt-1 h-5 w-5 flex-none text-emerald-600"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+                <span>End-to-end service: design, launch & scale.</span>
+              </span>
+            </div>
+
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a
+                href="#get-started"
+                class="inline-flex items-center justify-center rounded-full bg-emerald-500 px-6 py-3 text-sm font-semibold text-black shadow-lg shadow-emerald-500/20 transition hover:-translate-y-0.5 hover:bg-emerald-800"
+              >
+                Get Started
+              </a>
+              <a
+                href="#live-chat"
+                onclick="handleLiveChat(event)"
+                class="inline-flex items-center justify-center rounded-full bg-gray-100 px-6 py-3 text-sm font-semibold text-gray-900 shadow transition hover:-translate-y-0.5 hover:bg-gray-200"
+              >
+                Live Chat
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Form -->
+        <div class="relative flex flex-col items-center lg:items-start">
+          <!-- Badge -->
+          <div class="absolute -top-3 right-30 z-20 hidden sm:flex">
+            <div
+              class="flex h-14 w-14 items-center justify-center rounded-full bg-black text-[10px] font-extrabold uppercase tracking-wider text-white shadow"
+            >
+              50% OFF
+            </div>
+          </div>
+
+          <!-- Form -->
+          <div class="relative w-full max-w-md rounded-3xl bg-white p-2 shadow-2xl ring-1 ring-black/5">
+            <div class="rounded-2xl bg-emerald-500 p-6 sm:p-7">
+              <div class="mb-4">
+                <p class="text-[14px] font-bold uppercase tracking-wider text-black">
+                  Do You Have a Manuscript Ready?
+                </p>
+                <h2 class="text-xl sm:text-2xl font-extrabold text-black">
+                  PUBLISH YOUR BOOK NOW
+                </h2>
+              </div>
+
+              <form onsubmit="onSubmit(event)" class="space-y-3">
+                <input
+                  name="name"
+                  required
+                  placeholder="Full Name"
+                  class="w-full rounded-md border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="Email Address"
+                  class="w-full rounded-md border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200"
+                />
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number"
+                  class="w-full rounded-md border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200"
+                />
+                <textarea
+                  name="message"
+                  rows="3"
+                  placeholder="Your Message"
+                  class="w-full resize-none rounded-md border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200"
+                ></textarea>
+                <button
+                  type="submit"
+                  class="mt-2 w-full rounded-full bg-black px-5 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-gray-900"
+                >
+                  Connect With Our Expert
+                </button>
+                <p id="formMessage" class="text-sm mt-2"></p>
+              </form>
+            </div>
+          </div>
+
+          <!-- Model image -->
+          <div class="mt-8 lg:mt-10 lg:absolute lg:-right-12 lg:top-[12%] hidden lg:block">
+            <picture>
+              <source
+                srcset="https://res.cloudinary.com/dn3xpdakt/image/upload/v1756409264/hero-img_fxgu2s.webp"
+                type="image/png"
+              />
+              <img
+                src="https://res.cloudinary.com/dn3xpdakt/image/upload/v1756409264/hero-img_fxgu2s.webp"
+                alt="Smiling author holding a notebook"
+                class="h-[300px] w-auto lg:h-[420px] object-contain rounded-[28px]"
+              />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom ribbon -->
+    <div class="mt-10 lg:mt-16">
+      <div class="mx-auto w-full px-6 lg:px-0 shadow-2xl">
+        <div class="grid grid-cols-1 overflow-hidden shadow-2xl ring-1 ring-black/5 sm:grid-cols-3">
+          <div
+            class="col-span-2 bg-white px-6 py-3 text-center text-[13px] font-semibold tracking-wide text-gray-900 sm:text-sm"
+          >
+            KEEP ALL THE RIGHTS & REVENUES OF YOUR BOOK.
+          </div>
+          <a
+            href="#get-published"
+            class="block bg-amber-400 px-6 py-3 text-center text-[13px] font-extrabold uppercase tracking-wide text-black transition hover:bg-amber-300 sm:text-sm"
+          >
+            GET PUBLISHED TODAY!
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ FIX: Add is:inline so script runs in browser -->
+  <script is:inline>
+    function onSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const msg = document.getElementById("formMessage");
+
+      msg.innerText = "✅ Thanks! Your message was sent.";
+      msg.className = "text-white text-sm";
+      console.log("Form submitted:", Object.fromEntries(new FormData(form).entries()));
+      form.reset();
+    }
+
+    function handleLiveChat(e) {
+      e.preventDefault();
+      if (window.Tawk_API && typeof window.Tawk_API.toggle === "function") {
+        window.Tawk_API.toggle();
+      } else {
+        alert("⚠️ Live chat is still loading, please wait a moment.");
+      }
+    }
+  </script>
+</Layout>

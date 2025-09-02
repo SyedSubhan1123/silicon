@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publishing Process Section</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- Publishing Process Section -->
+  <section class="relative w-full bg-[#f6f7fb]">
+
+    <!-- Left glow blob -->
+    <div aria-hidden class="pointer-events-none absolute -left-24 top-24 h-64 w-64 rounded-full bg-gradient-to-br from-fuchsia-300/40 via-rose-200/40 to-amber-200/40 blur-2xl"></div>
+
+    <!-- Right concentric rings (decorative) -->
+    <div class="pointer-events-none absolute right-8 top-10 h-[280px] w-[280px] select-none opacity-70">
+      <svg viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full w-full">
+        <defs>
+          <linearGradient id="ring" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#f0c2dc" />
+            <stop offset="100%" stop-color="#e8a3cc" />
+          </linearGradient>
+        </defs>
+        <!-- outer ring -->
+        <circle cx="140" cy="140" r="120" stroke="url(#ring)" stroke-width="3" fill="none" />
+        <!-- mid ring -->
+        <circle cx="140" cy="140" r="96" stroke="url(#ring)" stroke-width="3" fill="none" />
+        <!-- inner ring -->
+        <circle cx="140" cy="140" r="72" stroke="url(#ring)" stroke-width="3" fill="none" />
+      </svg>
+    </div>
+
+    <div class="relative mx-auto max-w-[1120px] px-4 md:px-6 pt-12 pb-20">
+
+      <!-- Heading & Subhead -->
+      <header class="text-center">
+        <h2 class="text-[22px] md:text-[34px] font-extrabold tracking-[-0.01em] text-gray-900">
+          Our Streamlined Book Publishing Process
+        </h2>
+        <p class="mx-auto mt-2 md:mt-3 max-w-[860px] text-[12px] md:text-[14.5px] leading-relaxed text-gray-500">
+          Meet the team behind B4 Blurb. With years of experience in the design industry, we prepare
+          manuscripts for a smooth ride from brief to book-on-your-shelf. Below is how we keep things simple and
+          predictable.
+        </p>
+      </header>
+
+      <!-- Steps Cards -->
+      <div class="mt-8 md:mt-10 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+
+        <!-- Step 1 -->
+        <article class="rounded-2xl cursor-pointer hover:scale-110 transition-all duration-300 bg-white hover:bg-emerald-500 hover:text-white px-5 py-6 md:px-7 md:py-8 ring-1 ring-black/5 group shadow-2xl">
+          <span class="inline-flex items-center rounded-full bg-gradient-to-b from-emerald-400 to-emerald-500 text-white text-[11px] md:text-[12px] font-semibold px-3 py-1 shadow-xl">
+            Step 1
+          </span>
+          <h3 class="mt-3 text-[17px] md:text-[20px] font-semibold text-gray-900 group-hover:text-white tracking-tight">
+            Connect With Us
+          </h3>
+          <p class="mt-2 text-[12.5px] md:text-[14px] leading-relaxed group-hover:text-white text-gray-600">
+            The initial step is where we gather your book's details and the outcomes you expect. We'll outline timelines, goals, and everything this model now entails.
+          </p>
+        </article>
+
+        <!-- Step 2 -->
+        <article class="rounded-2xl cursor-pointer hover:scale-110 transition-all duration-300 bg-white hover:bg-emerald-500 hover:text-white px-5 py-6 md:px-7 md:py-8 ring-1 ring-black/5 group shadow-2xl">
+          <span class="inline-flex items-center rounded-full bg-gradient-to-b from-emerald-400 to-emerald-500 text-white text-[11px] md:text-[12px] font-semibold px-3 py-1 shadow-xl">
+            Step 2
+          </span>
+          <h3 class="mt-3 text-[17px] md:text-[20px] font-semibold text-gray-900 group-hover:text-white tracking-tight">
+            How we communicate
+          </h3>
+          <p class="mt-2 text-[12.5px] md:text-[14px] leading-relaxed group-hover:text-white text-gray-600">
+            We brief you on the process in clear, simple terms so we can align with your schedule and project scope. You'll get practical tips and a realistic preview of what's next.
+          </p>
+        </article>
+
+        <!-- Step 3 -->
+        <article class="rounded-2xl cursor-pointer hover:scale-110 transition-all duration-300 bg-white hover:bg-emerald-500 hover:text-white px-5 py-6 md:px-7 md:py-8 ring-1 ring-black/5 group shadow-2xl">
+          <span class="inline-flex items-center rounded-full bg-gradient-to-b from-emerald-400 to-emerald-500 text-white text-[11px] md:text-[12px] font-semibold px-3 py-1 shadow-xl">
+            Step 3
+          </span>
+          <h3 class="mt-3 text-[17px] md:text-[20px] font-semibold text-gray-900 group-hover:text-white tracking-tight">
+            Draft Reviews
+          </h3>
+          <p class="mt-2 text-[12.5px] md:text-[14px] leading-relaxed group-hover:text-white text-gray-600">
+            This stage is where you start to see your ideas refined as we present drafts for your feedback. Iteration is fast and focused so nothing moves forward without your nod.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

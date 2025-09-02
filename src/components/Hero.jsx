@@ -5,8 +5,9 @@ export default function Hero() {
   const [status, setStatus] = useState("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
+  // ✅ Form submission handler
   async function onSubmit(e) {
-    console.log("called");
+    console.log("Form submitted");
 
     e.preventDefault();
     setStatus("submitting");
@@ -19,7 +20,6 @@ export default function Hero() {
     const { data, error } = await actions.sendSignup(fd);
 
     if (error) {
-      // Show Zod field errors nicely if you want:
       if (isInputError(error)) {
         const first = Object.values(error.fields)[0]?.[0] ?? "Invalid input.";
         setErrorMsg(first);
@@ -32,6 +32,17 @@ export default function Hero() {
 
     setStatus("success");
     form.reset();
+  }
+
+  // ✅ Separate live chat handler
+  function handleLiveChat(e) {
+    e.preventDefault();
+    if (window.Tawk_API && typeof window.Tawk_API.toggle === "function") {
+      window.Tawk_API.toggle();
+    } else {
+      alert("Live chat is still loading, please wait a moment.");
+    }
+    console.log("Tawk_API:", window.Tawk_API);
   }
 
   console.log(status, "status");
@@ -121,7 +132,8 @@ export default function Hero() {
                 </a>
                 <a
                   href="#live-chat"
-                  className="inline-flex items-center justify-center rounded-full bg-amber-400 px-6 py-3 text-sm font-semibold text-gray-900 shadow-sm transition hover:-translate-y-0.5 hover:bg-amber-300"
+                  onClick={handleLiveChat} // ✅ calling separate function
+                  className="inline-flex items-center justify-center rounded-full bg-gray-100 px-6 py-3 text-sm font-semibold text-gray-900 shadow transition hover:-translate-y-0.5 hover:bg-gray-200"
                 >
                   Live Chat
                 </a>
@@ -150,7 +162,7 @@ export default function Hero() {
                   </h2>
                 </div>
 
-                <div className="space-y-3">
+                <form onSubmit={onSubmit} className="space-y-3">
                   <input
                     name="name"
                     required
@@ -177,8 +189,7 @@ export default function Hero() {
                     className="w-full resize-none rounded-md border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200"
                   />
                   <button
-                    type="button"
-                    onClick={onSubmit}
+                    type="submit"
                     disabled={status === "submitting"}
                     className="mt-2 w-full rounded-full bg-black px-5 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-gray-900 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
                   >
@@ -194,7 +205,7 @@ export default function Hero() {
                   {status === "error" && (
                     <p className="text-red-600 text-sm">{errorMsg}</p>
                   )}
-                </div>
+                </form>
               </div>
             </div>
 

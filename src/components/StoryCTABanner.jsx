@@ -24,7 +24,7 @@ export default function StoryCTABanner({
 
           {/* LEFT - Book / Devices */}
           <div className="col-span-12 md:col-span-6 flex justify-center md:justify-start relative">
-            
+
             {/* Mobile (stacked images) */}
             <div className="flex flex-col items-center gap-4 md:hidden">
               <img src={art.book1} alt="Book 1" className="w-[160px] h-auto object-contain" />
@@ -94,12 +94,20 @@ export default function StoryCTABanner({
               </a>
 
               {/* Live Chat Placeholder */}
-              {/* <a
+              <a
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (window.Tawk_API) {
+                    window.Tawk_API.toggle(); // opens/closes the widget
+                  } else {
+                    console.error("Tawk API not loaded yet!");
+                  }
+                }}
                 href="#"
-                className="hidden sm:inline-flex items-center justify-center rounded-full px-6 py-3 text-[14px] font-semibold bg-white text-gray-900 border border-gray-200 shadow-md hover:bg-gray-100 active:translate-y-[1px]"
+                className="hidden sm:inline-flex items-center justify-center rounded-full px-6 py-3 text-[14px] font-semibold bg-yellow-500 text-gray-900 border border-gray-200 shadow-md hover:bg-gray-100 active:translate-y-[1px]"
               >
                 Live Chat
-              </a> */}
+              </a>
             </div>
           </div>
         </div>
