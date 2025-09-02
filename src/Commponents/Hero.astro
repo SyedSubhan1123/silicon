@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { sendSignup } from "../actions/index.js";
 ---
 
 <Layout>
@@ -32,7 +33,8 @@ import Layout from "../layouts/Layout.astro";
       aria-hidden="true"
       class="pointer-events-none absolute -top-6 -left-10 -z-10 h-[460px] w-[720px] rotate-[4deg]"
       style="background: radial-gradient(90% 90% at 10% 10%, rgba(12,212,215,.18) 0%, rgba(255,221,87,.18) 35%, rgba(199,210,254,.18) 60%, rgba(255,255,255,0) 80%);"
-    ></div>
+    >
+    </div>
 
     <!-- Main content -->
     <div class="mx-auto max-w-7xl px-6 lg:px-8 pt-16 lg:pt-24">
@@ -45,11 +47,14 @@ import Layout from "../layouts/Layout.astro";
             <div
               class="mb-3 inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-3 py-1 text-[11px] font-semibold tracking-wide text-gray-800 shadow-sm"
             >
-              <span class="inline-block h-1.5 w-1.5 rounded-full bg-emerald-700"></span>
+              <span class="inline-block h-1.5 w-1.5 rounded-full bg-emerald-700"
+              ></span>
               TOP-TIER BOOK PUBLISHING
             </div>
 
-            <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight text-gray-900">
+            <h1
+              class="text-3xl sm:text-4xl font-extrabold leading-tight text-gray-900"
+            >
               Book Publishing Company
             </h1>
 
@@ -66,7 +71,9 @@ import Layout from "../layouts/Layout.astro";
                 >
                   <path d="M20 6L9 17l-5-5"></path>
                 </svg>
-                <span>Custom book publishing: eBooks, paperbacks & distribution.</span>
+                <span
+                  >Custom book publishing: eBooks, paperbacks & distribution.</span
+                >
               </span>
               <span class="flex items-start gap-3">
                 <svg
@@ -108,7 +115,8 @@ import Layout from "../layouts/Layout.astro";
                 >
                   <path d="M20 6L9 17l-5-5"></path>
                 </svg>
-                <span>In-house team with publishing consultancy & support.</span>
+                <span>In-house team with publishing consultancy & support.</span
+                >
               </span>
               <span class="flex items-start gap-3">
                 <svg
@@ -122,7 +130,9 @@ import Layout from "../layouts/Layout.astro";
                 >
                   <path d="M20 6L9 17l-5-5"></path>
                 </svg>
-                <span>Distribution to major platforms including Amazon & Kindle.</span>
+                <span
+                  >Distribution to major platforms including Amazon & Kindle.</span
+                >
               </span>
               <span class="flex items-start gap-3">
                 <svg
@@ -170,10 +180,14 @@ import Layout from "../layouts/Layout.astro";
           </div>
 
           <!-- Form -->
-          <div class="relative w-full max-w-md rounded-3xl bg-white p-2 shadow-2xl ring-1 ring-black/5">
+          <div
+            class="relative w-full max-w-md rounded-3xl bg-white p-2 shadow-2xl ring-1 ring-black/5"
+          >
             <div class="rounded-2xl bg-emerald-500 p-6 sm:p-7">
               <div class="mb-4">
-                <p class="text-[14px] font-bold uppercase tracking-wider text-black">
+                <p
+                  class="text-[14px] font-bold uppercase tracking-wider text-black"
+                >
                   Do You Have a Manuscript Ready?
                 </p>
                 <h2 class="text-xl sm:text-2xl font-extrabold text-black">
@@ -181,7 +195,7 @@ import Layout from "../layouts/Layout.astro";
                 </h2>
               </div>
 
-              <form onsubmit="onSubmit(event)" class="space-y-3">
+              <form method="POST" action={sendSignup} class="space-y-3">
                 <input
                   name="name"
                   required
@@ -219,7 +233,9 @@ import Layout from "../layouts/Layout.astro";
           </div>
 
           <!-- Model image -->
-          <div class="mt-8 lg:mt-10 lg:absolute lg:-right-12 lg:top-[12%] hidden lg:block">
+          <div
+            class="mt-8 lg:mt-10 lg:absolute lg:-right-12 lg:top-[12%] hidden lg:block"
+          >
             <picture>
               <source
                 srcset="https://res.cloudinary.com/dn3xpdakt/image/upload/v1756409264/hero-img_fxgu2s.webp"
@@ -239,7 +255,9 @@ import Layout from "../layouts/Layout.astro";
     <!-- Bottom ribbon -->
     <div class="mt-10 lg:mt-16">
       <div class="mx-auto w-full px-6 lg:px-0 shadow-2xl">
-        <div class="grid grid-cols-1 overflow-hidden shadow-2xl ring-1 ring-black/5 sm:grid-cols-3">
+        <div
+          class="grid grid-cols-1 overflow-hidden shadow-2xl ring-1 ring-black/5 sm:grid-cols-3"
+        >
           <div
             class="col-span-2 bg-white px-6 py-3 text-center text-[13px] font-semibold tracking-wide text-gray-900 sm:text-sm"
           >
@@ -258,17 +276,6 @@ import Layout from "../layouts/Layout.astro";
 
   <!-- ✅ FIX: Add is:inline so script runs in browser -->
   <script is:inline>
-    function onSubmit(e) {
-      e.preventDefault();
-      const form = e.target;
-      const msg = document.getElementById("formMessage");
-
-      msg.innerText = "✅ Thanks! Your message was sent.";
-      msg.className = "text-white text-sm";
-      console.log("Form submitted:", Object.fromEntries(new FormData(form).entries()));
-      form.reset();
-    }
-
     function handleLiveChat(e) {
       e.preventDefault();
       if (window.Tawk_API && typeof window.Tawk_API.toggle === "function") {
