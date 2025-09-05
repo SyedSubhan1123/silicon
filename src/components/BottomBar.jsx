@@ -3,7 +3,7 @@ const BottomBar = () => {
         <div className="fixed bottom-0 left-0 z-50 w-full inline sm:inline md:inline lg:hidden ">
             <div className="flex flex-row w-full h-12 relative">
                 <div className="!bg-emerald-800 w-[100%] text-white font-bold h-full">
-                    <a className="flex justify-center items-center gap-2 h-full" href="tel:+1 208 291 4545">
+                    <a className="flex justify-center items-center gap-2 h-full" href="tel:+1 323 989 1095">
                         <svg
                             stroke="currentColor"
                             fill="currentColor"

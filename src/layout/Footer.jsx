@@ -31,7 +31,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <FaPhoneAlt className="text-[#ffd139]" />
-                <a href="tel:+12082914545">(208) 291 4545</a>
+                <a href="tel:+1 323 989 1095">(323) 989 1095</a>
               </div>
               <div className="flex items-center gap-2">
                 <FaMapMarkerAlt className="text-[#ffd139]" />
