@@ -3,22 +3,26 @@ const Header = () => {
     <header className="bg-[#E9F4EE] text-black h-[104px] md:h-[120px] sm:h-[120px] lg:h-[104px] px-6 sm:px-6 lg:px-6">
       <div className="silicon-container">
         <div className="py-3 flex justify-between items-center">
-
           {/* Logo optimized */}
           <div className="flex-1 flex justify-center items-start sm:justify-start md:justify-center lg:items-start lg:justify-start">
-            <picture>
-              {/* Serve modern formats first */}
+            <a href="/" className="cursor-pointer">
+              <picture>
+                {/* Serve modern formats first */}
 
-              <source srcSet="https://res.cloudinary.com/dn3xpdakt/image/upload/v1756409115/logo_jcp3e7.webp" type="image/webp" />
-              <img
-                src="https://res.cloudinary.com/dn3xpdakt/image/upload/v1756409115/logo_jcp3e7.webp"
-                alt="B4Blurb Publishers Logo"
-                loading="eager" // logos should load immediately
-                width="189"
-                height="80"
-                className="h-20 md:h-24 lg:h-20 w-auto object-contain"
-              />
-            </picture>
+                <source
+                  srcSet="https://res.cloudinary.com/dn3xpdakt/image/upload/v1756409115/logo_jcp3e7.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="https://res.cloudinary.com/dn3xpdakt/image/upload/v1756409115/logo_jcp3e7.webp"
+                  alt="B4Blurb Publishers Logo"
+                  loading="eager" // logos should load immediately
+                  width="189"
+                  height="80"
+                  className="h-20 md:h-24 lg:h-20 w-auto object-contain"
+                />
+              </picture>
+            </a>
           </div>
 
           {/* Contact buttons */}
