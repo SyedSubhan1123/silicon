@@ -1,0 +1,172 @@
+---
+import "../styles/global.css";
+
+import "swiper/css";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="icon"
+      href="https://res.cloudinary.com/dn3xpdakt/image/upload/v1758037393/book_baby-01-01_1_mrqr7f.webp"
+    />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Primary Meta Tags -->
+    <title>B4 Blurb</title>
+    <meta
+      name="description"
+      content="The publishing industry has evolved considerably in the last decade, with digital disruption, piracy, changing reading habits, the rise of audiobooks, increased competition."
+    />
+    <meta
+      name="keywords"
+      content="publishing, ebooks, audiobooks, book marketing, digital publishing, self publishing"
+    />
+    <meta name="author" content="B4 Blurb" />
+    <!-- Google Tag Manager -->
+    <script is:inline>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-TCWC9FXX");
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body>
+    <slot />
+    <footer class="bg-slate-200 text-black">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+        <!-- Grid: left (support) / center (logo) / right (disclaimer) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          <!-- Center Logo -->
+          <div class="">
+            <a
+              href="/"
+              class="inline-flex items-center"
+              aria-label="Go to homepage"
+            >
+              <!-- Replace src with your logo path -->
+              <img
+                src="https://res.cloudinary.com/dn3xpdakt/image/upload/v1758036711/book_baby-01_1_pkbzmm.webp"
+                alt="Book Baby ltd. logo"
+                class="h-20 w-auto"
+              />
+            </a>
+          </div>
+          <!-- Support -->
+          <section aria-labelledby="footer-support" class="space-y-4">
+            <h2
+              id="footer-support"
+              class="text-base font-semibold tracking-wide text-black"
+            >
+              Support
+            </h2>
+            <ul class="space-y-3 text-sm">
+              <li class="flex items-start gap-3">
+                <!-- Phone icon -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 shrink-0 text-[#5FD496]"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M2 5c0-1.1.9-2 2-2h2.2c.9 0 1.7.6 1.9 1.5l.7 2.6c.2.9-.1 1.8-.8 2.3l-1 0.8a13.9 13.9 0 0 0 6.5 6.5l.8-1c.5-.7 1.4-1 2.3-.8l2.6.7c.9.2 1.5 1 1.5 1.9V20a2 2 0 0 1-2 2h-.5C9.6 22 2 14.4 2.1 4.5V4.4V5z"
+                    fill="currentColor"></path>
+                </svg>
+                <a href="tel:+13239891095" class="hover:text-white transition">
+                  <span class="font-medium">Call Us:</span> (323) 989 1095
+                </a>
+              </li>
+              <li class="flex items-start gap-3">
+                <!-- Mail icon -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 shrink-0 text-[#5FD496]"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M3 5h18a2 2 0 0 1 2 2v.3l-11 6.4L1 7.3V7a2 2 0 0 1 2-2zm19 4.2V17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9.2l10.1 5.9c.6.4 1.2.4 1.8 0L22 9.2z"
+                    fill="currentColor"></path>
+                </svg>
+                <a
+                  href="mailto:info@bookbabyltd.com"
+                  class="hover:text-white transition break-all"
+                >
+                  <span class="font-medium">Email Us:</span> info@bookbabyltd.com
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Disclaimer -->
+          <section
+            aria-labelledby="footer-disclaimer"
+            class="text-sm leading-6 text-black"
+          >
+            <h2 id="footer-disclaimer" class="sr-only">Disclaimer</h2>
+            <p>
+              Book Baby ltd. is an independent entity, unaffiliated with,
+              sponsored by, or associated with any other companies or brands
+              with similar or identical names, including major publishing
+              companies or corporations. All content, services, and products
+              offered through our website are exclusively provided by Book Baby
+              ltd. and are not endorsed or approved by any other entities.
+            </p>
+          </section>
+        </div>
+
+        <!-- Divider -->
+        <div class="mt-10 border-t border-black pt-6">
+          <p class="text-xs text-black text-center">
+            © 2025 Book Baby ltd. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript" is:inline>
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/68c925758dbaf81922ff5326/1j58rkktd";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+    </script>
+    <!--End of Tawk.to Script-->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TCWC9FXX"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
+    <!-- End Google Tag Manager (noscript) -->
+  </body>
+</html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>

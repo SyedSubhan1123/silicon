@@ -27,7 +27,7 @@ export default function Footer() {
             <div className="mt-6 space-y-3 text-sm md:text-base">
               <div className="flex items-center gap-2">
                 <FaEnvelope className="text-[#ffd139]" />
-                <span>info@b4blurb.com</span>
+                <span>info@bookbabyltd.com</span>
               </div>
               <div className="flex items-center gap-2">
                 <FaPhoneAlt className="text-[#ffd139]" />

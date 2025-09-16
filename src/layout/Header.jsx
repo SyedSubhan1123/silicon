@@ -10,11 +10,11 @@ const Header = () => {
                 {/* Serve modern formats first */}
 
                 <source
-                  srcSet="https://res.cloudinary.com/dn3xpdakt/image/upload/v1756409115/logo_jcp3e7.webp"
+                  srcSet="https://res.cloudinary.com/dn3xpdakt/image/upload/v1758036711/book_baby-01_1_pkbzmm.webp"
                   type="image/webp"
                 />
                 <img
-                  src="https://res.cloudinary.com/dn3xpdakt/image/upload/v1756409115/logo_jcp3e7.webp"
+                  src="https://res.cloudinary.com/dn3xpdakt/image/upload/v1758036711/book_baby-01_1_pkbzmm.webp"
                   alt="B4Blurb Publishers Logo"
                   loading="eager" // logos should load immediately
                   width="189"
@@ -45,7 +45,7 @@ const Header = () => {
                   <path fill="none" d="M0 0h24v24H0z"></path>
                   <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"></path>
                 </svg>
-                <span className="montserrat">info@b4blurb.com</span>
+                <span className="montserrat">info@bookbabyltd.com</span>
               </a>
             </div>
             <a
